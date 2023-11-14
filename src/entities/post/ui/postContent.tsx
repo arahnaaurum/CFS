@@ -8,7 +8,7 @@ type PostContentProps = {
 
 function PostContent({ post }: PostContentProps) {
   const userQuery = useQuery({
-    queryKey: ['singlePostAuthor'],
+    queryKey: ['singlePostAuthor', post.userId],
     queryFn: () => getUserById(post.userId),
   })
 

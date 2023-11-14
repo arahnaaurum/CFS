@@ -7,7 +7,7 @@ import PostContent from "../entities/post/ui/postContent";
 function Post() {
   const { id } = useParams();
   const postQuery = useQuery({
-    queryKey: ['singlePost'],
+    queryKey: ['singlePost', id],
     queryFn: () =>  {if (id) return getPostById(+id)} ,
   });
 
