@@ -10,7 +10,7 @@ type PostItemProps = {
 
 function PostItem ({post}: PostItemProps) {
   const userQuery = useQuery({
-    queryKey: ['user'],
+    queryKey: ['user', post.userId],
     queryFn: () => getUserById(post.userId),
   })
 
